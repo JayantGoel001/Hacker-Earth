@@ -28,7 +28,7 @@ HackerEarth provides enterprise software that helps organisations with their tec
     <tr>
       <th scope="row" style="padding-right: 0.4em;">Headquarters</th>
       <td class="adr" style="line-height: 1.35em;">
-        <div style="display: inline;" class="locality">San Francisco, California</div>, <div style="display: inline;" class="country-name">USA</div>
+        <div style="display: inline;" class="locality">San Francisco, California, USA</div>
       </td>
     </tr>
     <tr>
