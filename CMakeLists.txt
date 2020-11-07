@@ -3,4 +3,4 @@ project(Hacker_Earth)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Hacker_Earth main.cpp)
+add_executable(. "Minimum Steps.cpp")
