@@ -2,8 +2,7 @@
 
 HackerEarth provides enterprise software that helps organisations with their technical hiring needs. HackerEarth is used by organizations for technical skill assessment and remote video interviewing. In addition to that HackerEarth also has a community and since inception built a base of 4M+ developers . In the community, HackerEarth is known for having conducted 1000+ hackathons and 10,000+ programming challenges to date. HackerEarth has raised $11.5 million in funding over three rounds. Today, more than 750 customers worldwide use its technical coding assessments platform, including Amazon, Walmart Labs, Thoughtworks, Societe Generale, HP, VMware, DBS, HCL, GE, Wipro, Barclays, Pitney Bowes, Intel, and L&T Infotech. HackerEarth is backed by GSF Global and Angelprime.
 
-<table style="width:22em">
-  <strong align="center">HackerEarth</strong>
+<table style="width:20em">
   <tbody>
     <tr>
       <td colspan="2" style="text-align:center">
@@ -13,28 +12,28 @@ HackerEarth provides enterprise software that helps organisations with their tec
       </td>
     </tr>
     <tr>
-      <th scope="row" style="padding-right: 0.5em;">Industry</th>
+      <th scope="row" style="padding-right: 0.4em;">Industry</th>
       <td class="category" style="line-height: 1.35em;">
         <a href="https://en.wikipedia.org/wiki/Software_company" class="mw-redirect" title="Software Company">Software Company</a>
       </td>
     </tr>
     <tr>
-      <th scope="row" style="padding-right: 0.5em;">Founded</th>
+      <th scope="row" style="padding-right: 0.4em;">Founded</th>
       <td style="line-height: 1.35em;">November 2012</td>
     </tr>
     <tr>
-      <th scope="row" style="padding-right: 0.5em;">Founders</th>
+      <th scope="row" style="padding-right: 0.4em;">Founders</th>
       <td class="agent" style="line-height: 1.35em;">Sachin Gupta<br>Vivek Prakash</td>
     </tr>
     <tr>
-      <th scope="row" style="padding-right: 0.5em;">Headquarters</th>
+      <th scope="row" style="padding-right: 0.4em;">Headquarters</th>
       <td class="adr" style="line-height: 1.35em;">
         <div style="display: inline;" class="locality">San Francisco, California</div>, 
         <div style="display: inline;" class="country-name">USA</div>
       </td>
     </tr>
     <tr>
-      <th scope="row" style="padding-right: 0.5em;">
+      <th scope="row" style="padding-right: 0.4em;">
         <div style="display:inline-block; padding:0.1em 0;line-height:1.2em;">Number of locations</div>
       </th>
       <td style="line-height: 1.35em;">United States, India, China</td></tr><tr><th scope="row" style="padding-right: 0.5em;">Products</th><td style="line-height: 1.35em;">
@@ -47,7 +46,7 @@ HackerEarth provides enterprise software that helps organisations with their tec
     </td>
     </tr>
     <tr>
-      <th scope="row" style="padding-right: 0.5em;">Website</th>
+      <th scope="row" style="padding-right: 0.4em;">Website</th>
       <td style="line-height: 1.35em;">
         <span class="url"><a rel="nofollow" class="external text" href="http://hackerearth.com">hackerearth<wbr>.com</a>
         </span>
