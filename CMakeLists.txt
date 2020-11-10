@@ -3,4 +3,4 @@ project(Hacker_Earth)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(. "Number of steps.cpp")
+add_executable(. "Magical Word .cpp")

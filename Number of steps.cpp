@@ -8,12 +8,10 @@ int main() {
     int a[n];
     int b[n];
     int minEL = INT16_MAX;
-    int minPos = -1;
     for (int i = 0; i < n; ++i) {
         cin >> a[i];
         if (a[i] < minEL) {
             minEL = a[i];
-            minPos = i;
         }
     }
     for (int i = 0; i < n; ++i) {
