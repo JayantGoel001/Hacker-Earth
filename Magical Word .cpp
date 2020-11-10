@@ -2,7 +2,7 @@
 #include <map>
 #include <string>
 int genNearPrime(bool *ar,int x){
-    for (int i = 0; i < 13; ++i) {
+    for (int i = 0; i < 26; ++i) {
         if (ar[x-i]){
             return x-i;
         }
@@ -14,18 +14,30 @@ int genNearPrime(bool *ar,int x){
 }
 using namespace std;
 int main(){
-    bool isPrime[92];
-    for (int i = 0; i < 92; ++i) {
+    bool isPrime[122];
+    for (int i = 0; i < 122; ++i) {
         isPrime[i]= true;
     }
-    for (int i = 2; i*i < 92; i++) {
-        for (int j = i*i; j < 92; j+=i) {
+    for (int i = 2; i*i < 122; i++) {
+        for (int j = i*i; j < 122; j+=i) {
             isPrime[j]= false;
         }
     }
     map<char,char> m;
+    for (int i = 0; i <65 ; ++i) {
+        m.insert(make_pair(i,'C'));
+    }
     for (int i = 65; i <91 ; ++i) {
         m.insert(make_pair(i,genNearPrime(isPrime,i)));
+    }
+    for (int i = 91; i <96 ; ++i) {
+        m.insert(make_pair(i,'C'));
+    }
+    for (int i = 96; i <123 ; ++i) {
+        m.insert(make_pair(i,genNearPrime(isPrime,i)));
+    }
+    for (int i = 123; i <165 ; ++i) {
+        m.insert(make_pair(i,'C'));
     }
     int n;
     cin>>n;
@@ -35,7 +47,16 @@ int main(){
         string str;
         cin>>str;
         for (int j = 0; j < len; ++j) {
-            cout<<m[str[j]];
+            if(str[j]=='^' || str[j]=='_'){
+                cout<<"a";
+            }else if(str[j]=='|' || str[j]=='}'||str[j]=='{'){
+                cout<<"q";
+            }else if (str[j]==']'||str[j]=='['||str[j]=='\\') {
+                cout<<"Y";
+            }else {
+                cout << m[str[j]];
+            }
         }
+        cout<<"\n";
     }
 }
