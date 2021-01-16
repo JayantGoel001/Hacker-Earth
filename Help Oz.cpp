@@ -1,20 +1,15 @@
 #include <iostream>
 #include <set>
-#include <algorithm>
 #include <cmath>
-
 #define ll long long int
 using namespace std;
 int main(){
     int n;
     cin>>n;
-    ll maxEl = -1;
     ll ar[n];
     for (int i = 0; i < n; ++i) {
         cin>>ar[i];
-        maxEl = max(maxEl,ar[i]);
     }
-    sort(ar,ar+n);
     int diff = ar[1]-ar[0];
     set<int> factors;
     for (int i = 1; i <=sqrt(diff) ; ++i) {
