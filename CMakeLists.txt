@@ -3,4 +3,4 @@ project(Hacker_Earth)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(. "Say no to Handshakes!!!.cpp")
+add_executable(. "Find Me!.cpp")
