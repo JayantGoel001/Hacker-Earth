@@ -3,4 +3,4 @@ project(Hacker_Earth)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(. Mystery.cpp)
+add_executable(. "Help Oz.cpp")
