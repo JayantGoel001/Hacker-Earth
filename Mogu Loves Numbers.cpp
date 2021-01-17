@@ -13,17 +13,23 @@ int main(){
         for (int j = i*i; j <tot ; j+=i) {
             isPrime[j]= false;
         }
-
     }
+    int ar[tot+1];
+    for (int i = 0; i <=tot; ++i) {
+        ar[i]=0;
+    }
+    for (int i = 1; i <=tot; ++i) {
+        if (isPrime[i]){
+            ar[i]=ar[i-1]+1;
+        }else{
+            ar[i]=ar[i-1];
+        }
+    }
+
     for (int i = 0; i < t; ++i) {
         int L,R;
         cin>>L>>R;
-        int count = 0;
-        for (int j = L; j <=R ; ++j) {
-            if(isPrime[j]){
-                count++;
-            }
-        }
+        int count = ar[max(L,R)] - ar[min(L,R)];
         cout<<count<<"\n";
     }
 }
