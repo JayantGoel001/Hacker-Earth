@@ -30,6 +30,9 @@ int main(){
         int L,R;
         cin>>L>>R;
         int count = ar[max(L,R)] - ar[min(L,R)];
-        cout<<count<<"\n";
+        if(isPrime[max(L,R)] && isPrime[min(L,R)]) {
+            count++;
+        }
+        cout << count << "\n";
     }
 }
