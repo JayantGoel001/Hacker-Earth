@@ -3,7 +3,7 @@ using namespace std;
 int main(){
     int t;
     cin>>t;
-    int tot = 1000;//000;
+    int tot = 1000000;
     bool isPrime[tot+1];
     isPrime[1]= false;
     for (int i = 2; i <= tot; ++i) {
