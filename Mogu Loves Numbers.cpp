@@ -3,7 +3,7 @@ using namespace std;
 int main(){
     int t;
     cin>>t;
-    int tot = 1000000;
+    int tot = 1000;//000;
     bool isPrime[tot+1];
     isPrime[1]= false;
     for (int i = 2; i <= tot; ++i) {
@@ -18,8 +18,8 @@ int main(){
     for (int i = 0; i <=tot; ++i) {
         ar[i]=0;
     }
-    for (int i = 1; i <=tot; ++i) {
-        if (isPrime[i]){
+    for (int i = 2; i <=tot; ++i) {
+        if (isPrime[i-1]){
             ar[i]=ar[i-1]+1;
         }else{
             ar[i]=ar[i-1];
@@ -30,7 +30,7 @@ int main(){
         int L,R;
         cin>>L>>R;
         int count = ar[max(L,R)] - ar[min(L,R)];
-        if(isPrime[max(L,R)] && isPrime[min(L,R)]) {
+        if(isPrime[max(L,R)] ) {
             count++;
         }
         cout << count << "\n";
