@@ -28,16 +28,21 @@ int main(){
     int n;
     cin>>n;
     ll ar[n];
-    ll prod = 1;
+    ll prod = 1ll;
+    ll mod = pow(10, 9) + 7;
     for (int i = 0; i < n; ++i) {
         cin>>ar[i];
-        prod*=ar[i];
+        prod=(prod*ar[i])%mod;
     }
-    ll gcd = GCD(max(ar[0],ar[1]),min(ar[0],ar[1]));
-    for (int i = 2; i <n ; ++i) {
-        gcd = GCD(max(gcd,ar[i]),min(gcd,ar[i]));
+    ll gcd;
+    if (n>=2) {
+        gcd = GCD(max(ar[0], ar[1]), min(ar[0], ar[1]));
+        for (int i = 2; i < n; ++i) {
+            gcd = GCD(max(gcd, ar[i]), min(gcd, ar[i]));
+        }
+    } else{
+        gcd = ar[0];
     }
-    ll mod = pow(10,9)+7;
     cout<<prodPowGCD(prod,gcd,mod)<<"\n";
 }
 
