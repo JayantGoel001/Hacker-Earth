@@ -3,4 +3,4 @@ project(Hacker_Earth)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(. "Average student.cpp")
+add_executable(. "Reversed Linked List.cpp")
