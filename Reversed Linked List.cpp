@@ -33,42 +33,62 @@ int main(){
 
     temp = head;
     Node *evenPtr = nullptr;
+    Node *evenPtrHead = nullptr;
     Node *prev = nullptr;
     Node *prevEven = nullptr;
+
     while (temp){
-        if (temp->data%2==0){
+        if ((temp->data)%2==0){
             if (evenPtr){
                 evenPtr->next = new Node(temp->data);
                 evenPtr = evenPtr->next;
             } else{
                 evenPtr = new Node(temp->data);
+                evenPtrHead = evenPtr;
                 prevEven = prev;
             }
-        } else{
-            if (prevEven) {
-                Node *tail = evenPtr;
+
+        } else {
+            if (evenPtrHead) {
+                Node *tail = evenPtrHead;
                 while (tail->next) {
                     tail = tail->next;
                 }
-                while (evenPtr && evenPtr != tail) {
+                while (evenPtrHead && evenPtrHead != tail) {
                     Node *nextValue = tail->next;
-                    Node *dataValue = new Node(evenPtr->data);
+                    Node *dataValue = new Node(evenPtrHead->data);
                     tail->next = dataValue;
                     dataValue->next = nextValue;
 
-                    evenPtr = evenPtr->next;
+                    evenPtrHead = evenPtrHead->next;
                 }
-                prevEven->next = tail;
-                while (tail->next){
-                    tail = tail->next;
+
+//            Node *xyz = tail;
+//            while (xyz){
+//                cout<<xyz->data<<" ";
+//                xyz = xyz->next;
+//            }
+//            cout<<"\n";
+                if (prevEven) {
+                    prevEven->next = tail;
+                    while (tail->next) {
+                        tail = tail->next;
+                    }
+                    tail->next = temp;
+                } else {
+                    head = tail;
+                    while (tail->next) {
+                        tail = tail->next;
+                    }
+                    tail->next = temp;
                 }
-                tail->next = temp;
-                evenPtr = nullptr;
+                evenPtrHead = nullptr;
             }
         }
         prev = temp;
         temp = temp->next;
     }
+    cout<<"\n";
     while (head){
         cout<<head->data<<" ";
         head = head->next;
