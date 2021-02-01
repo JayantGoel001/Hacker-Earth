@@ -111,7 +111,6 @@ int main(){
             tail->next = temp;
         }
     }
-    cout<<"\n";
     while (head){
         cout<<head->data<<" ";
         head = head->next;
