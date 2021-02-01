@@ -14,6 +14,7 @@ public:
         this->next = nullptr;
     }
 };
+
 int main(){
     int n;
     cin>>n;
@@ -39,7 +40,7 @@ int main(){
 
     while (temp){
         if ((temp->data)%2==0){
-            if (evenPtr){
+            if (evenPtrHead){
                 evenPtr->next = new Node(temp->data);
                 evenPtr = evenPtr->next;
             } else{
@@ -62,13 +63,6 @@ int main(){
 
                     evenPtrHead = evenPtrHead->next;
                 }
-
-//            Node *xyz = tail;
-//            while (xyz){
-//                cout<<xyz->data<<" ";
-//                xyz = xyz->next;
-//            }
-//            cout<<"\n";
                 if (prevEven) {
                     prevEven->next = tail;
                     while (tail->next) {
@@ -81,12 +75,41 @@ int main(){
                         tail = tail->next;
                     }
                     tail->next = temp;
+
                 }
                 evenPtrHead = nullptr;
+                evenPtr = nullptr;
             }
         }
         prev = temp;
         temp = temp->next;
+    }
+    if(evenPtrHead){
+        Node *tail = evenPtrHead;
+        while (tail->next) {
+            tail = tail->next;
+        }
+        while (evenPtrHead && evenPtrHead != tail) {
+            Node *nextValue = tail->next;
+            Node *dataValue = new Node(evenPtrHead->data);
+            tail->next = dataValue;
+            dataValue->next = nextValue;
+
+            evenPtrHead = evenPtrHead->next;
+        }
+        if (prevEven) {
+            prevEven->next = tail;
+            while (tail->next) {
+                tail = tail->next;
+            }
+            tail->next = temp;
+        } else {
+            head = tail;
+            while (tail->next) {
+                tail = tail->next;
+            }
+            tail->next = temp;
+        }
     }
     cout<<"\n";
     while (head){
