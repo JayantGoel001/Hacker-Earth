@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 using namespace std;
 class Node{
 public:
@@ -35,25 +36,26 @@ int main(){
                 head = temp;
             }
         }
-        while (k) {
-            temp = head;
-            Node *prev = nullptr;
-            while (temp && temp->next) {
-                if (temp->data < temp->next->data) {
-                    Node *tempValue = temp->next;
-                    if (prev) {
-                        prev->next = tempValue;
-                        temp = tempValue;
-                    } else {
-                        head = tempValue;
-                        prev = nullptr;
-                        temp = temp->next;
-                    }
-                    k--;
+        temp = head;
+        stack<Node *> prev;
+        while (temp && temp->next && k) {
+            if (temp->data < temp->next->data) {
+                Node *tempValue = temp->next;
+                if (prev.size()!=0) {
+                    Node *prevTemp = prev.top();
+
+                    prev.pop();
+                    prevTemp->next = tempValue;
+
+                    temp = prevTemp;
                 } else {
-                    prev = temp;
+                    head = tempValue;
                     temp = temp->next;
                 }
+                k--;
+            } else {
+                prev.push(temp);
+                temp = temp->next;
             }
         }
         while (head){
