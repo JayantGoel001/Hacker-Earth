@@ -40,9 +40,10 @@ int main(){
                 Node *tempValue = temp->next;
                 if (prev){
                     prev->next = tempValue;
+                    temp = tempValue;
                 } else{
                     head = tempValue;
-                    prev = tempValue;
+                    prev = nullptr;
                 }
                 k--;
             } else {
