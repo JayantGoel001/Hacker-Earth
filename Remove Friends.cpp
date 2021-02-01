@@ -14,6 +14,8 @@ public:
     }
 };
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int t;
     cin>>t;
     for (int i = 0; i < t; ++i) {
@@ -33,22 +35,25 @@ int main(){
                 head = temp;
             }
         }
-        temp = head;
-        Node *prev = nullptr;
-        while (temp && temp->next && k){
-            if (temp->data < temp->next->data){
-                Node *tempValue = temp->next;
-                if (prev){
-                    prev->next = tempValue;
-                    temp = tempValue;
-                } else{
-                    head = tempValue;
-                    prev = nullptr;
+        while (k) {
+            temp = head;
+            Node *prev = nullptr;
+            while (temp && temp->next) {
+                if (temp->data < temp->next->data) {
+                    Node *tempValue = temp->next;
+                    if (prev) {
+                        prev->next = tempValue;
+                        temp = tempValue;
+                    } else {
+                        head = tempValue;
+                        prev = nullptr;
+                        temp = temp->next;
+                    }
+                    k--;
+                } else {
+                    prev = temp;
+                    temp = temp->next;
                 }
-                k--;
-            } else {
-                prev = temp;
-                temp = temp->next;
             }
         }
         while (head){
